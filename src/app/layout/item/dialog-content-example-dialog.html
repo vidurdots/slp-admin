@@ -5,6 +5,7 @@
 			<p>Sign in to access your personalized homepage,
 				follow authors and topics you love, and clap for
 			stories that matter to you.</p>
+            <mat-card class="inner-form">
 			<mat-form-field>
 			<input matInput placeholder="Email" formControlName="email">
 			<mat-error *ngIf="loginForm.get('email').hasError('required')">
@@ -22,7 +23,7 @@
 			Password is required
 			</mat-error>
 			</mat-form-field>
-			<div class="remember-forgot-password" fxLayout="row" fxLayout.xs="column"
+			<mat-card class="remember-forgot-password" fxLayout="row" fxLayout.xs="column"
 				fxLayoutAlign="space-between center">
 				<mat-checkbox class="remember-me" aria-label="Remember Me">
 				Remember Me
@@ -30,7 +31,10 @@
 				<a class="forgot-password">
 					Forgot Password?
 				</a>
-			</div>
+			</mat-card>
+		   </mat-card>
+
+
 			<button mat-raised-button color="accent" class="submit-button" aria-label="LOG IN"
 			[disabled]="loginForm.invalid" (click)="usersignin()">
 			LOGIN
@@ -39,10 +43,13 @@
 		</form>
 		
 		<div *ngIf="show">
-			<form name="forgotpassword" novalidate>
+			<form class="forgot-form" name="forgotpassword" novalidate>
+                <mat-card class="forgot-field"> 
 				<mat-form-field>
 				<input matInput placeholder="Email" formControlName="email">
 				</mat-form-field>
+				</mat-card>
+
 				<button mat-raised-button color="accent" class="submit-button" aria-label="Reset Password">
 				Reset Password
 				</button>

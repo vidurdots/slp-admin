@@ -1,9 +1,11 @@
 <div fxLayout="row" fxLayoutAlign="flex-start"  fxFlex class="login_box">
 	<div id="Register-form" class="popup-form">
+	<form name="loginForm" [formGroup]="loginForm" novalidate>
 		<mat-vertical-stepper [linear]="isLinear" #stepper>
+		
 		<mat-step [stepControl]="firstFormGroup">
 		<ng-template matStepLabel>Join Today</ng-template>
-		<form name="joinForm" [formGroup]="joinForm" novalidate>
+		
 			<mat-form-field>
 			<input matInput type="text" placeholder="Name" formControlName="name">
 				<mat-error>
@@ -12,12 +14,12 @@
 				</mat-form-field>
 			<mat-form-field>
 			<input matInput placeholder="Email" formControlName="email" (blur)="checkEmail()">
-			<mat-error *ngIf="joinForm.get('email').hasError('required')">
+			<mat-error *ngIf="loginForm.get('email').hasError('required')">
 			Email is required
 			</mat-error>
 			<mat-error
-			*ngIf="!joinForm.get('email').hasError('required') &&
-			joinForm.get('email').hasError('email')">
+			*ngIf="!loginForm.get('email').hasError('required') &&
+			loginForm.get('email').hasError('email')">
 			Please enter a valid email address
 			</mat-error>
 			</mat-form-field>
@@ -27,19 +29,14 @@
 			Password is required
 			</mat-error>
 			</mat-form-field>
-			<mat-form-field>
-			<input matInput type="text" placeholder="Postcode" formControlName="postcode">
-			<mat-error>
-			Postcode is required
-			</mat-error>
-			</mat-form-field>
+			
 			<div class="remember-forgot-password" fxLayout="row" fxLayout.xs="column"
 				fxLayoutAlign="space-between center">
-				<mat-checkbox class="change-me" aria-label="change-me">
+				<mat-checkbox class="change-me" aria-label="change-me" formControlName="register_type" (change)="registerType()" value="2">
 				If You Want to Register as a Company
 				</mat-checkbox>
 			</div>
-			<button mat-raised-button color="accent" class="submit-button" aria-label="LOG IN"
+			<!--<button mat-raised-button color="accent" class="submit-button" aria-label="LOG IN"
 			[disabled]="joinForm.invalid" (click)="join_today_signup()">
 			LOGIN
 			</button>
@@ -49,15 +46,15 @@
 					service providers. Click "Sign in" above to accept Smart Life Path’s
 					<a href="#">Terms of Service</a> & <a href="#">Privacy Policy.</a>
 				</p>
-			</div>
-		</form>
+			</div> -->
+		
 		</mat-step>
-		<mat-step [stepControl]="secondFormGroup">
+		<mat-step [stepControl]="secondFormGroup" *ngIf="register_type==2">
 	
-			<ng-template matStepLabel>Organisation Registration</ng-template>
-			<form name="loginForm" [formGroup]="loginForm" novalidate>
+			<ng-template matStepLabel>Organization Registration</ng-template>
+			
 			<mat-form-field>
-			<input matInput type="text" placeholder="Name" formControlName="name">
+			<input matInput type="text" placeholder="Organisation Name" formControlName="company_name">
 				<mat-error>
 				Name is required
 				</mat-error>
@@ -69,13 +66,7 @@
 				</mat-error>
 				</mat-form-field>
 				<mat-form-field>
-					<input matInput type="password" placeholder="Password" formControlName="password">
-					<mat-error>
-					Password is required
-					</mat-error>
-					</mat-form-field>
-				<mat-form-field>
-				<input matInput placeholder="Email" formControlName="email" (blur)="checkEmailOrganisation()">
+				<input matInput placeholder="Organisation Email" formControlName="company_email">
 				<mat-error *ngIf="loginForm.get('email').hasError('required')">
 				Email is required
 				</mat-error>
@@ -93,11 +84,19 @@
 				</mat-error>
 				</mat-form-field>
 <mat-form-field>
-				<input matInput type="text" placeholder="Postcode" formControlName="postcode">
-				<mat-error>
-				Postcode is required
-				</mat-error>
-				</mat-form-field>			
+<input matInput type="text" placeholder="Organisation Postcode" formControlName="postcode" (keyup)="onSearch()" />
+<mat-error>
+Postcode is required
+</mat-error>
+<p>{{ searchTerm }}</p>
+
+ <ul>
+
+   <li *ngFor="let result of results$ | async "> {{result.description}} 
+   </li>
+
+ </ul>
+</mat-form-field>			
 				
 				
 				<!--<mat-form-field>
@@ -107,34 +106,39 @@
 				</mat-error>
 				</mat-form-field>-->
 				
-					<mat-form-field>
-					<mat-select placeholder="Categories" formControlName="categories" required>
-					<mat-option [value]="2">
-					Categories1
-					</mat-option>
-					<mat-option [value]="1">
-					Categories2
-					</mat-option>
-					</mat-select>
+									
+				
+				
+				
+			
+			
+		
+		</mat-step>
+<mat-step [stepControl]="thirdFormGroup" *ngIf="register_type==2" class="organization-form">
+<ng-template matStepLabel>Organization Category</ng-template>
 
-					</mat-form-field>				
-				
-				
+
+<mat-form-field>
+<input matInput type="text" placeholder="Categories" formControlName="categories" required>
+</mat-form-field>
+
+<button mat-button matStepperPrevious class="forgot-button new-btn">Back</button>
+</mat-step>
+</mat-vertical-stepper>
+		<div class="form_btn">
 				<button mat-raised-button color="accent" class="submit-button" aria-label="LOG IN"
 				[disabled]="loginForm.invalid"  (click)="organisation_signup()">
 				Create an Account
 				</button>
-				<a mat-button  class="forgot-button" >Back</a>
-							<div class="form-footer">
+				<!--<a mat-button  class="forgot-button" >Back</a>-->	
+				<div class="form-footer">
 				<p class="copyright">
 					To make Smart Life Path work, we log user data and share it with
 					service providers. Click "Sign in" above to accept Smart Life Path’s
 					<a href="#">Terms of Service</a> & <a href="#">Privacy Policy.</a>
 				</p>
+				</div>
 			</div>
 			</form>
-		
-		</mat-step>
-		</mat-vertical-stepper>
 	</div>
 </div>

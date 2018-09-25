@@ -195,15 +195,24 @@
 			}
 
 			.edit-detail-form {
+				display: block !important;
+
 				.mat-form-field {
 					display: block;
 					width: 100%;
+					max-width: 100% !important;
 				}
 
 			}
 
-			.change-password-form { padding-top:20px;
-				.mat-form-field{ width:100%; display:block;}
+			.change-password-form {
+				padding-top: 20px;
+
+				.mat-form-field {
+					width: 100%;
+					display: block;
+				}
+
 			}
 
 		}
@@ -290,4 +299,99 @@
 
 	}
 
+}
+
+@media only screen and (max-width:1199px) and (min-width:992px) {
+	.container {
+		max-width: 970px;
+	}
+
+	.content-sec {
+		.left-detail {
+			width: 700px;
+			float: left;
+		}
+
+	}
+
+	.content-sec {
+		.sidebar-right {
+			width: 220px;
+			float: right;
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+	.container {
+		max-width: 750px;
+	}
+
+	.content-sec {
+		.left-detail {
+			width: 517px;
+			float: left;
+		}
+
+	}
+
+	.content-sec {
+		.sidebar-right {
+			width: 185px;
+			float: right;
+
+			.followers-sec {
+				.followers-wrap {
+					.followers-img img {
+						width: 30px;
+						height: 30px;
+					}
+
+					.followers-content {
+						padding-top: 0px;
+
+						h4 {
+							font-size: 14px;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:767px) {
+	.container {
+		max-width: 100%;
+	}
+
+		.content-sec {
+		.left-detail {
+			width: 100%;
+			float: none;
+		}
+
+		.sidebar-right {
+			width: 100%;
+			float: none;
+		}
+
+
+
+	}
+
+
+
+
+}
+
+@media only screen and (max-width:479px) {
 }

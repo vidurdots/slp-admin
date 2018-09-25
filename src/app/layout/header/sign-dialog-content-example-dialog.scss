@@ -6,9 +6,9 @@ Popup css start here
 ================================*/
 .login_box {
 	width: 1013px;
-	background-color: $popup-blue;
+	background-color:$white-color;
 	border-radius: 0px;
-	background-image: url(/assets/images/home-images/character-vector.jpg);
+	background-image: url(/assets/images/home-images/character-vector.png);
 	background-repeat: no-repeat;
 	background-position: 10px bottom;
 	background-size: 296px;
@@ -21,7 +21,7 @@ Popup css start here
 
 		h2 {
 			font-size: 28px;
-			color: $white-color;
+			color:$primary-color;
 			text-align: center;
 			font-weight: 600;
 			margin-bottom: 21px;
@@ -30,7 +30,7 @@ Popup css start here
 
 		p {
 			font-size: 18px;
-			color: $white-color;
+			color:$primary-color;
 			text-align: center;
 			line-height: 25px;
 			font-weight: 300;
@@ -51,7 +51,7 @@ Popup css start here
 			padding-top: 18px;
 
 			span {
-				color: $white-color;
+				color:$primary-color;
 				display: inline-block;
 				font-size: 14px;
 				font-weight: 300;
@@ -59,7 +59,7 @@ Popup css start here
 
 			a {
 				display: inline-block;
-				color: $white-color;
+				color:$primary-color;
 				font-size: 14px;
 				font-weight: bold;
 				text-decoration: underline;
@@ -69,7 +69,7 @@ Popup css start here
 			.copyright {
 				font-weight: 300;
 				font-size: 12px;
-				color: $white-color;
+				color:$primary-color;
 				line-height: 21px;
 
 				a {
@@ -82,6 +82,11 @@ Popup css start here
 
 		}
 
+		.form_btn {
+			padding-left: 37px;
+			padding-right: 0px;
+		}
+
 	}
 
 }
@@ -92,17 +97,22 @@ Popup css start here
 			background: none;
 		}
 
+		.form-footer {
+			clear: both;
+			padding-top: 2px;
+
+			.copyright {
+				margin-bottom: 11px;
+			}
+
+		}
 
 
-.form-footer{
-	clear:both;
-	    padding-top: 2px;
-
-.copyright{
-    margin-bottom: 11px;	
-}
-
-}
+		.mat-button{
+    position: absolute;
+    right: 0px;
+    bottom: -63px;
+	}
 
 
 

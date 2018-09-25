@@ -16,13 +16,13 @@
 	.title {
 		position: relative;
 		color: $primary-color;
-		font-size: 28px;
-		font-weight: 800;
-		line-height: 1.2em;
-		margin-bottom: 31px;
-		text-transform: uppercase;
-		text-align: center;
-		letter-spacing: 1px;
+	    font-size: 46px;
+	    font-weight: 600;
+	    line-height: 1.2em;
+	    margin-bottom: 31px;
+	    text-transform: none;
+	    text-align: left;
+	    letter-spacing: 1px;
 	}
 
 	.fa {
@@ -39,25 +39,30 @@
 		background: none;
 	}
 
-	.map-sec {
-		iframe {
-			width: 100%;
+	.address-section {
+		padding: 40px 0px;
+		display: inline-block;
+		width: 100%;
+
+		.left-box {
+			float: left;
+			width: 50%;
+			background: $light-blue;
+			text-align: center;
+            padding: 60px 0;
 		}
 
-	}
-
-	.address-section { padding:40px 0px;
 		.address-box {
-			background: rgba(244, 244, 244, 0.6);
-			display: inline-block;
-			width: 100%;
+			float: left;
+			width: 50%;
+			    padding-left: 113px;
 
 			.address-wrap {
-				width: 33%;
+				width: 100%;
 				float: left;
 
 				.address-content {
-					padding: 30px 20px 30px 35px;
+					padding: 30px 20px 3px 0px;
 					display: inline-block;
 					width: 100%;
 
@@ -71,47 +76,17 @@
 						width: 77%;
 						font-size: 14px;
 						font-weight: 300;
-						color: $primary-color;
-						padding-top:4px;
+						
+
+						padding-top: 4px;
+
+						a{
+                       color: $primary-color;
+
+						}
+
 					}
 
-				}
-
-			}
-
-		}
-
-	}
-
-	.contact-form-section { padding-bottom:30px;
-		.contact-us-form {
-			.mat-form-field {
-				width: 50%;
-				padding-right: 15px;
-				margin-bottom: 27px;
-
-				&.ng-tns-c11-5 {
-					width: 100%;
-				}
-
-			}
-
-			.submit-btn {
-				border: solid 1px $blue-color;
-				border-radius: 5px;
-				color: $white-color;
-				float: none;
-				padding: 0px;
-				display: block;
-				min-width: 130px;
-				font-weight: 400;
-				box-shadow: none;
-				background: $blue-color;
-				margin: 0 auto;
-
-				&:hover{
-          background: none; 
-          color: $blue-color;
 				}
 
 			}
