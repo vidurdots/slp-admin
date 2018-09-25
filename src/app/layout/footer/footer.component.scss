@@ -1,0 +1,52 @@
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/mixins.scss';
+
+.footer{ padding:9px 0;
+	border-top: solid 1px $light-border;
+	background: none;
+			text-align:center;
+
+	.footer-nav{
+		list-style:none;
+		padding:0px;
+		margin:0px;
+		width:100%;
+
+
+		a{
+			color:$footer-color;
+			padding: 13px 7px;
+			font-weight: 300;
+			font-size: 14px;
+			 min-width: 100%;
+			 display: inline;
+
+		&:hover{
+			color:$blue-color;
+		}	 
+
+		}
+
+	}
+
+}
+
+
+@media only screen and (max-width:479px) {
+
+.footer{
+
+.footer-nav{
+a{
+    padding: 13px 3px;
+    font-size: 12px;
+}
+
+}
+
+
+}
+
+
+}
+

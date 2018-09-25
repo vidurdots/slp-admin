@@ -1,0 +1,184 @@
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/mixins.scss';
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.fa {
+	width: auto !important;
+	height: auto !important;
+	min-width: auto !important;
+	min-height: auto !important;
+}
+
+.content-sec {
+	padding: 18px 0;
+	display: inline-block;
+	width: 100%;
+
+	.mat-card {
+		padding: 0px;
+		background: none;
+		box-shadow: none;
+	}
+
+	img {
+		width: auto;
+		margin: 0px;
+		max-width: 100% !important;
+	}
+
+	.mail-page {
+		display: inline-block;
+		width: 100%;
+		position: relative;
+
+		.mail-sidebar {
+			position: sticky;
+			top: 0px;
+			width: 300px;
+			float: left;
+
+			.mat-button {
+				min-width: auto;
+				padding: 0px 12px;
+				display: block;
+				width: 100%;
+				text-align: left;
+
+				.mat-icon {
+					font-size: 25px !important;
+					width: 28px !important;
+					height: 28px !important;
+					line-height: 28px !important;
+					min-width: auto !important;
+					min-height: auto !important;
+					margin-right: 10px;
+				}
+
+				&.active {
+					background: rgba(0, 112, 186, 0.1);
+					@include border-radius(0px 12px 12px 0px);
+					color: $blue-color;
+
+					.mat-icon {
+						color: $blue-color;
+					}
+
+				}
+
+			}
+
+		}
+
+		.mail-content {
+			margin-left: 300px;
+
+			.form-message {
+				display: inline-block;
+				width: 100%;
+				    margin-bottom: 17px;
+				        margin-top: 21px;
+
+				.mat-select{
+					background: rgba(0, 112, 186, 0.1);
+				    height: 41px;
+				    line-height: 41px;
+				    padding: 0 10px;
+				    border-radius: 0px;
+
+				}
+
+				.form-message-wrap {
+					width: 50%;
+					float: left;
+
+					.submit-btn{
+						background:$blue-color;
+						color:$white-color;
+						    height: 41px;
+					}
+
+
+					.mat-form-field {
+						width: 100%;
+					}
+
+					.mat-form-field-underline {
+						display: none;
+					}
+
+					.delete_all_form {
+						.mat-form-field {
+						    width: 70%;
+						    float: left;
+						    margin-right: 10px;
+						}
+
+					}
+
+				}
+
+			}
+
+			.mail-received {
+				background: $bus-page-bg;
+				border-top: solid 1px $blue-color;
+
+				.mail-row {
+					display: inline-block;
+					border-bottom: solid 1px $bus-page-border;
+					width: 100%;
+					padding: 11px 16px;
+
+					.name {
+						float: left;
+						margin-right: 20px;
+						padding-top: 2px;
+
+						a {
+							color: $primary-color;
+							font-weight: 400;
+						}
+
+					}
+
+					.mat-checkbox {
+						float: left;
+						margin-right: 9px;
+					}
+
+					.message-in {
+						float: left;
+						padding-top: 2px;
+
+						a {
+							color: $primary-color;
+						}
+
+					}
+
+					.time {
+						float: right;
+					}
+
+					a {
+						&:hover {
+							text-decoration: none;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

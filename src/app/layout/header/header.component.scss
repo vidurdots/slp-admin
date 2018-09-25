@@ -1,0 +1,183 @@
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/mixins.scss';
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.header {
+	padding: 15px 0;
+	height: auto;
+	background: none;
+	border: none;
+	@include box-shadow(3px 2px 4px rgba(0, 0, 0, 0.1));
+
+	.head-one {
+		display: inline-block;
+		width: 100%;
+		position: relative;
+
+		.get-btn {
+			border: solid 1px $blue-color;
+			@include border-radius(5px);
+			color: $blue-color;
+			float: left;
+			padding: 0px;
+			display: block;
+			min-width: 130px;
+			font-weight: 400;
+			box-shadow:none;
+
+			&:hover {
+				background: $blue-color;
+				color: $white-color;
+			}
+
+		}
+
+		.logo-main {
+			position: absolute;
+			width: auto;
+			left: 0px;
+			right: 0px;
+			max-width: 269px;
+			margin: 0 auto;
+
+			a {
+				font-size: 26px;
+				text-transform: uppercase;
+				color: $primary-color;
+				display: block;
+				min-width: 265px;
+				width: 100%;
+				font-family: $logo-font;
+
+				&:hover {
+					color: $blue-color;
+				}
+
+			}
+
+		}
+
+		.head-right {
+			float: right;
+		}
+
+	}
+
+
+	&.header_login{
+
+		.container{position:relative;}
+
+		.navmenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 372px;
+    top: 16px;
+}
+
+		.head-one{
+
+			.header-logo-main{ 
+				float:left;
+
+				img{ width: 100%;
+				    max-width: 79px!important;
+				    height: auto;
+				    margin: 0px;}
+			}
+
+
+		}
+
+
+	}
+
+
+}
+
+@media only screen and (max-width:1199px) and (min-width:992px) {
+	.container {
+		max-width: 970px;
+	}
+
+}
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+	.container {
+		max-width: 750px;
+	}
+
+}
+
+@media only screen and (max-width:767px) {
+	.container {
+		max-width: 100%;
+	}
+
+	.header {
+		.head-one {
+			.get-btn {
+				display: none;
+			}
+
+			.logo-main {
+				position: relative;
+				width: auto;
+				max-width: 269px;
+				margin: 0;
+				float: left;
+
+				a {
+					margin: 0px;
+					padding: 0px;
+					min-width: 232px;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:479px) {
+
+	.header {
+		.head-one {
+			.get-btn {
+				display: none;
+			}
+
+			.logo-main {
+				position: relative;
+				width: auto;
+				max-width: 165px;
+				margin: 0;
+				float: left;
+
+				a {
+				margin: 0px;
+			    padding: 0px;
+			    font-size: 18px;
+			    min-width: 159px;
+				}
+
+			}
+
+
+
+		}
+
+	}
+
+}

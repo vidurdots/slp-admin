@@ -1,0 +1,192 @@
+<main>
+	<div class="content-sec">
+		<div class="container">
+			<mat-card class="my-profile">
+			<mat-card class="profile-banner">
+			<mat-card class="banner-img">
+			<img mat-card-image src="/assets/images/home-images/profile-banner.jpg">
+			<mat-card class="bg-black"></mat-card>
+			</mat-card>
+			<mat-card class="user-info">
+			<mat-card class="user-img">
+			<img mat-card-image src="/assets/images/home-images/profile-img.jpg">
+			<a href="#" mat-card-image class="upload"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">camera_alt</mat-icon></a>
+			</mat-card>
+			<mat-card class="author-name">
+			<mat-card-title><h3>Charlie Adams</h3></mat-card-title>
+			</mat-card>
+			</mat-card>
+			</mat-card>
+			</mat-card>
+			<mat-card class="profile-content">
+			<mat-card class="left-detail">
+			<mat-card-title><h2 class="title">Add Event</h2></mat-card-title>
+			<mat-card class="my-profile-detail">
+			<form name="event_add" class="event_add_form">
+				<mat-form-field>
+				<input matInput placeholder="Event Title" name="event_title" required>
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput placeholder="Event slug" name="event_slug" required>
+				</mat-form-field>
+				<mat-form-field>
+				<textarea matInput placeholder="Short Description" name="event_excerpt" required></textarea>
+				</mat-form-field>
+				<mat-form-field>
+				<textarea matInput placeholder="Description" name="event_description"></textarea>
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput type="date" placeholder="Event startdate" name="event_startdate" required>
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput type="date" placeholder="Event enddate" name="event_enddate" required>
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput  placeholder="Event Price" name="event_price_needed" required>
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput  placeholder="Event Address" name="event_address" required>
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput placeholder="City" name="city" required>
+				
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput placeholder="State" name="state" required>
+				
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput #postalCode placeholder="Postal Code" value=""
+				name="postalCode" required>
+				<mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+				
+				
+				</mat-form-field>
+				<mat-form-field>
+				<mat-select placeholder="Country" name="country" required>
+				<mat-option [value]="'United States of America'">
+				United States of America
+				</mat-option>
+				<mat-option [value]="'United Kingdom'">
+				United Kingdom
+				</mat-option>
+				<mat-option [value]="'Russia'">
+				Russia
+				</mat-option>
+				<mat-option [value]="'China'">
+				China
+				</mat-option>
+				<mat-option [value]="'Japan'">
+				Japan
+				</mat-option>
+				<mat-option [value]="'Turkey'">
+				Turkey
+				</mat-option>
+				</mat-select>
+				
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput  placeholder="Event latitute" name="event_lat" required>
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput placeholder="Event longitude" name="event_lang" required>
+				</mat-form-field>
+				<mat-form-field>
+				<mat-select placeholder="Event Type" name="event_type" required>
+				<mat-option [value]="'public'">
+				Public
+				</mat-option>
+				<mat-option [value]="'private'">
+				Private
+				</mat-option>
+				<mat-option [value]="'organization'">
+				Organization
+				</mat-option>
+				</mat-select>
+				</mat-form-field>
+				<mat-form-field>
+				<mat-select placeholder="Status" name="event_status" required>
+				<mat-option [value]="'1'">
+				Publish
+				</mat-option>
+				<mat-option [value]="'0'">
+				Draft
+				</mat-option>
+				</mat-select>
+				</mat-form-field>
+				<button mat-button class="submit-btn">Add Event</button>
+			</form>
+			</mat-card>
+			</mat-card>
+			<mat-card class="sidebar-right">
+			<mat-card-title><h2 class="title">Followers</h2></mat-card-title>
+			<mat-card class="followers-sec">
+			<mat-list>
+			<mat-list-item>
+			<mat-card class="followers-wrap">
+			<mat-card class="followers-img"><img mat-card-image src="/assets/images/home-images/author-img-2.jpg"></mat-card>
+			<mat-card class="followers-content">
+			<mat-card-title><h4>Shail Singh</h4></mat-card-title>
+			<mat-card-content><span>2h</span></mat-card-content>
+			</mat-card>
+			<a mat-button href="#" class="edit"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">more_vert</mat-icon></a>
+			</mat-card>
+			</mat-list-item>
+			<mat-list-item>
+			<mat-card class="followers-wrap">
+			<mat-card class="followers-img"><img mat-card-image src="/assets/images/home-images/author-img-2.jpg"></mat-card>
+			<mat-card class="followers-content">
+			<mat-card-title><h4>Shail Singh</h4></mat-card-title>
+			<mat-card-content><span>2h</span></mat-card-content>
+			</mat-card>
+			<a mat-button href="#" class="edit"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">more_vert</mat-icon></a>
+			</mat-card>
+			</mat-list-item>
+			<mat-list-item>
+			<mat-card class="followers-wrap">
+			<mat-card class="followers-img"><img mat-card-image src="/assets/images/home-images/author-img-2.jpg"></mat-card>
+			<mat-card class="followers-content">
+			<mat-card-title><h4>Shail Singh</h4></mat-card-title>
+			<mat-card-content><span>2h</span></mat-card-content>
+			</mat-card>
+			<a mat-button href="#" class="edit"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">more_vert</mat-icon></a>
+			</mat-card>
+			</mat-list-item>
+			<mat-list-item>
+			<mat-card class="followers-wrap">
+			<mat-card class="followers-img"><img mat-card-image src="/assets/images/home-images/author-img-2.jpg"></mat-card>
+			<mat-card class="followers-content">
+			<mat-card-title><h4>Shail Singh</h4></mat-card-title>
+			<mat-card-content><span>2h</span></mat-card-content>
+			</mat-card>
+			<a mat-button href="#" class="edit"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">more_vert</mat-icon></a>
+			</mat-card>
+			</mat-list-item>
+			<mat-list-item>
+			<mat-card class="followers-wrap">
+			<mat-card class="followers-img"><img mat-card-image src="/assets/images/home-images/author-img-2.jpg"></mat-card>
+			<mat-card class="followers-content">
+			<mat-card-title><h4>Shail Singh</h4></mat-card-title>
+			<mat-card-content><span>2h</span></mat-card-content>
+			</mat-card>
+			<a mat-button href="#" class="edit"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">more_vert</mat-icon></a>
+			</mat-card>
+			</mat-list-item>
+			<mat-list-item>
+			<mat-card class="followers-wrap">
+			<mat-card class="followers-img"><img mat-card-image src="/assets/images/home-images/author-img-2.jpg"></mat-card>
+			<mat-card class="followers-content">
+			<mat-card-title><h4>Shail Singh</h4></mat-card-title>
+			<mat-card-content><span>2h</span></mat-card-content>
+			</mat-card>
+			<a mat-button href="#" class="edit"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">more_vert</mat-icon></a>
+			</mat-card>
+			</mat-list-item>
+			</mat-list>
+			</mat-card>
+			</mat-card>
+			</mat-card>
+			
+		</div>
+	</div>
+</main>

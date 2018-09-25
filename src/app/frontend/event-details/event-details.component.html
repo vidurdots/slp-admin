@@ -1,0 +1,123 @@
+<main>
+	<div class="content-sec site-pages">
+		<div class="container">
+			<div class="event-detail">
+				
+				<mat-drawer-container class="example-container">
+				<mat-drawer mode="side" opened>
+				<div class="event-sidebar">
+					<mat-nav-list>
+					<a mat-list-item href="#" class="side-menu"><span class="icon"><img mat-card-image class="icon-black" src="/assets/images/home-images/path-icon.png"><img mat-card-image class="icon-white" src="/assets/images/home-images/path-icon-hover.png"></span> Path</a>
+					<a mat-list-item href="#" class="side-menu"><span class="icon"><img mat-card-image class="icon-black" src="/assets/images/home-images/community-icon.png">
+					<img mat-card-image class="icon-white" src="/assets/images/home-images/community-icon-hover.png"></span> Community</a>
+					<a mat-list-item href="#" class="side-menu"><span class="icon"><img mat-card-image class="icon-black" src="/assets/images/home-images/household-icon.png"><img mat-card-image class="icon-white" src="/assets/images/home-images/household-icon-hover.png"></span> Houshold</a>
+					<a mat-list-item href="#" class="side-menu"><span class="icon"><img mat-card-image class="icon-black" src="/assets/images/home-images/following-icon.png"><img mat-card-image class="icon-white" src="/assets/images/home-images/following-icon-hover.png"></span> Following</a>
+					<a mat-list-item href="#" class="side-menu"><span class="icon"><img mat-card-image class="icon-black" src="/assets/images/home-images/create-icon.png"><img mat-card-image class="icon-white" src="/assets/images/home-images/create-icon-hover.png"></span> Create org</a>
+					</mat-nav-list>
+				</div>
+				</mat-drawer>
+				<mat-drawer-content>
+				<div class="event-detail-wrap">
+					<div class="breadcrumbs">
+						<a mat-button href="#">Organisation Name <span class="icons"><mat-icon class="arrow-icon material-icons" role="img" aria-hidden="true">chevron_right</mat-icon></span></a>
+						<a mat-button href="#">Event</a>
+					</div>
+					<div class="slide-banner">
+						<img mat-card-image src="/assets/images/home-images/event-banner.jpg">
+					</div>
+					<div class="event-mid-wrap">
+						<div class="event-mid">
+							<mat-card-title><h2 class="title">Activity Stream</h2></mat-card-title>
+							<div class="activity-stream">
+								<form class="example-form">
+									<div class="area_box">
+										<div class="author_img"><img mat-card-image src="/assets/images/home-images/author-img-1.jpg"></div>
+										<div class="reply_content">
+											<mat-form-field class="example-full-width">
+											<textarea matInput placeholder="Leave a comment"></textarea>
+											</mat-form-field>
+										</div>
+									</div>
+									
+									<button mat-button class="submit-btn">Submit</button>
+								</form>
+								<mat-card class="example-card">
+								<div class="comments-list">
+									<div class="comment-main-level">
+										<mat-card class="comment-avatar">
+										<img mat-card-image class="avatar-img" src="/assets/images/home-images/author-img-1.jpg">
+										<mat-card-title><h3>Shail Singh</h3></mat-card-title>
+										<mat-card-subtitle><span>10-5-2018</span></mat-card-subtitle>
+										</mat-card>
+										<mat-card-content class="comment_description">
+										<mat-card-content><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+										Lorem Ipsum has been the industry's standard dummy.</p></mat-card-content>
+										</mat-card-content>
+										<mat-card-actions>
+										<div class="reply-btn">
+											<a mat-button href="#" class="reply">Reply</a>
+											<a mat-button href="#" class="report">Report</a>
+										</div>
+										</mat-card-actions>
+										<div class="comments-container">
+											<mat-card class="comment-avatar">
+											<img class="avatar-img" src="/assets/images/home-images/author-img-1.jpg">
+											<mat-card-title><h3>Shail Singh</h3></mat-card-title>
+											<mat-card-subtitle><span>10-5-2018</span></mat-card-subtitle>
+											</mat-card>
+											<mat-card-content class="comment_description">
+											<mat-card-content><p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p></mat-card-content>
+											</mat-card-content>
+										</div>
+												<div class="comments-container">
+											<mat-card class="comment-avatar">
+											<img class="avatar-img" src="/assets/images/home-images/author-img-1.jpg">
+											<mat-card-title><h3>Shail Singh</h3></mat-card-title>
+											<mat-card-subtitle><span>10-5-2018</span></mat-card-subtitle>
+											</mat-card>
+											<mat-card-content class="comment_description">
+											<mat-card-content><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></mat-card-content>
+											</mat-card-content>
+										</div>
+									</div>
+									
+									
+								</div>
+								</mat-card>
+							</div>
+						</div>
+						
+						<div class="event-details-sub">
+							<mat-card-title><h2 class="title">Event Details</h2></mat-card-title>
+							<mat-card class="description-sec">
+								<mat-card-title><h3>DESCRIPTION</h3></mat-card-title>
+								<mat-card-content><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's tandard dummy.</p></mat-card-content>
+							</mat-card>
+							<mat-card class="prgress-bar">
+								<mat-card-title><h3>Event Target</h3></mat-card-title>
+								<mat-card class="progress">
+			                   <mat-slider  thumbLabel  [displayWith]="formatLabel"  tickInterval="1000"  min="1"  max="100000"></mat-slider>
+								</mat-card>
+								<mat-card-title><h3>Achieved</h3></mat-card-title>
+								<mat-card class="progress">
+				                 <mat-slider  thumbLabel  [displayWith]="formatLabel"  tickInterval="1000"  min="1"  max="100000"></mat-slider>
+								</mat-card>
+							</mat-card>
+							<mat-card class="date">
+							<mat-card-title><h3>Start Date</h3></mat-card-title>
+							<mat-form-field>
+							  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+							  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+							  <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+							</mat-form-field>
+							</mat-card>
+						</div>
+					</div>
+					
+				</div>
+				</mat-drawer-content>
+				</mat-drawer-container>
+			</div>
+		</div>
+	</div>
+</main>

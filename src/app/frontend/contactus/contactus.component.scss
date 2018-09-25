@@ -1,0 +1,165 @@
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/mixins.scss';
+
+.content-sec {
+	padding: 0px 0 18px;
+
+	.fa {
+		width: auto !important;
+		height: auto !important;
+		min-width: auto !important;
+		min-height: auto !important;
+	}
+
+	&.contact-page {
+		h2 {
+			font-size: 30px;
+			font-weight: 900;
+			color: $primary-color;
+			text-align: center;
+		}
+
+		p {
+			font-style: italic;
+			font-weight: 400;
+			font-size: 15px;
+			color: $primary-color;
+			text-align: center;
+		}
+
+	}
+
+	.contact-infobox {
+		margin-top: 30px;
+		border: solid 1px $lighter-border;
+		padding:30px 0;
+
+		.contact-infobox-icon {
+			display: inline-block;
+			height: 95px;
+			width: 95px;
+			@include border-radius(50%);
+			background: #323435;
+			color: $white-color;
+			text-align: center;
+			font-size: 36px;
+			padding: 21px 0;
+			margin-bottom: 27px;
+			position: relative;
+			-webkit-transition: all 0.4s ease-in-out 0s;
+			-o-transition: all 0.4s ease-in-out 0s;
+			transition: all 0.4s ease-in-out 0s;
+
+			i {
+				color: $white-color;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				border-radius: 1000px;
+				border: 2px solid $blue-color;
+				opacity: 0;
+				visibility: hidden;
+				-webkit-transition: all 0.4s ease-in-out 0s;
+				-o-transition: all 0.4s ease-in-out 0s;
+			}
+
+		}
+
+		&:hover {
+			.contact-infobox-icon {
+				background: $blue-color;
+
+				&:before {
+					opacity: 1;
+					visibility: visible;
+					-webkit-transform: scale(1.1);
+					-ms-transform: scale(1.1);
+					transform: scale(1.1);
+				}
+
+			}
+
+		}
+
+		h6 {
+			font-weight: 700;
+			color: $primary-color;
+			text-transform: uppercase;
+			margin-bottom: 25px;
+			font-size: 16px;
+		}
+
+		p {
+			color: $primary-color;
+			font-weight: 300;
+			font-size: 14px;
+			margin-bottom: 0px;
+
+			a {
+				color: $primary-color;
+			}
+
+		}
+
+	}
+
+	.contact-page-bottom { padding:45px 0px; margin-top:50px;
+		background: rgba(246, 246, 246, 0.2);
+
+		.contact-page-form { padding:45px 0px;
+			.form-group {
+				input {
+					height: 45px;
+					margin-bottom: 15px;
+					background-color: $contact-field-color;
+					line-height: 25px;
+					padding: 10px 20px;
+					width: 100%;
+					color: $primary-color;
+					border: none;
+				}
+
+				textarea {
+					height: 100px;
+					margin-bottom: 15px;
+					background-color: $contact-field-color;
+					line-height: 25px;
+					padding: 10px 20px;
+					width: 100%;
+					color: $primary-color;
+					border: none;
+				}
+
+
+				.submit-btn{
+					    background:$blue-color; color:$white-color;
+					    display: block;
+					    padding: 8px 18px;
+					    border-radius: 0px;
+					    font-size: 14px;
+					    text-transform: uppercase;
+					    font-weight: 300;
+					    margin: 0 auto;
+                    
+                    span{
+
+                    	i{ margin-left:10px; color:$white-color;}
+
+
+                    }
+
+				}
+ 
+			}
+
+		}
+
+	}
+
+}

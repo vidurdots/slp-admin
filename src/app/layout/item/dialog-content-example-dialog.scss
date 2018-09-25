@@ -1,0 +1,162 @@
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/mixins.scss';
+
+/* ================================
+Popup css start here
+================================*/
+
+.mat-card{
+background: rgb(237, 242, 250);
+box-shadow:none;
+padding:0px;
+}
+
+
+.login_box {
+	width: 1013px;
+	background-color:$white-color;
+	border-radius: 0px;
+	background-image: url(/assets/images/home-images/character-vector.png);
+	background-repeat: no-repeat;
+	background-position: 10px bottom;
+	background-size: 296px;
+	padding: 33px 0;
+
+	.popup-form {
+		max-width: 369px;
+		margin: 0 auto;
+		width: 100%;
+
+		.inner-form { padding: 17px 20px;
+    margin-bottom: 19px;}
+
+
+    .remember-forgot-password{
+
+    	.forgot-password{ display:none;}
+
+
+    }
+
+
+    .forgot-form{
+    	.forgot-field{
+    background: rgb(237, 242, 250);
+    padding: 7px 20px;
+    margin: 13px 0;
+    }
+
+    }
+
+
+		h2 {
+			font-size: 28px;
+			color: $primary-color;
+			text-align: center;
+			font-weight: 600;
+			margin-bottom: 21px;
+			margin-top: 0px;
+		}
+
+		p {
+			font-size: 18px;
+			color: $primary-color;
+			text-align: center;
+			line-height: 25px;
+			font-weight: 300;
+			margin-bottom: 28px;
+		}
+
+		.mat-form-field {
+			display: block;
+		}
+
+		form {
+			display: inline-block;
+			width: 100%;
+		}
+
+		.form-footer {
+			text-align: center;
+			padding-top: 18px;
+
+			span {
+				color: $primary-color;
+				display: inline-block;
+				font-size: 14px;
+				font-weight: 300;
+			}
+
+			a {
+				display: inline-block;
+				color: $primary-color;
+				font-size: 14px;
+				font-weight: bold;
+				text-decoration: underline;
+				padding: 0 5px;
+			}
+
+			.copyright {
+				font-weight: 300;
+				font-size: 12px;
+				color: $primary-color;
+				line-height: 21px;
+
+				a {
+					display: inline-block;
+					font-weight: 300;
+					font-size: 12px;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:1199px) and (min-width:992px) {
+	.login_box {
+		width: 793px;
+		background-image: none;
+	}
+
+}
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+	.login_box {
+		width: 614px;
+		background-image: none;
+	}
+
+}
+
+@media only screen and (max-width:767px) {
+	.login_box {
+		width: 100%;
+		max-width: 700px;
+		background-image: none;
+		padding: 33px 30px;
+
+		.popup-form {
+			max-width: 100%;
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:479px) {
+
+	.login_box {
+		padding: 33px 18px;
+
+		.popup-form {
+			max-width: 100%;
+		}
+
+	}
+
+
+}

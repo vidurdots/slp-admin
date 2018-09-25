@@ -1,0 +1,72 @@
+<div fxLayout="row" fxLayoutAlign="flex-start"  fxFlex class="login_box">
+	<div id="sign-in" class="popup-form">
+		<form name="loginForm" [formGroup]="loginForm" novalidate>
+			<h2>Sign In</h2>
+			<p>Sign in to access your personalized homepage,
+				follow authors and topics you love, and clap for
+			stories that matter to you.</p>
+            <mat-card class="inner-form">
+			<mat-form-field>
+			<input matInput placeholder="Email" formControlName="email">
+			<mat-error *ngIf="loginForm.get('email').hasError('required')">
+			Email is required
+			</mat-error>
+			<mat-error
+			*ngIf="!loginForm.get('email').hasError('required') &&
+			loginForm.get('email').hasError('email')">
+			Please enter a valid email address
+			</mat-error>
+			</mat-form-field>
+			<mat-form-field>
+			<input matInput type="password" placeholder="Password" formControlName="password">
+			<mat-error>
+			Password is required
+			</mat-error>
+			</mat-form-field>
+			<mat-card class="remember-forgot-password" fxLayout="row" fxLayout.xs="column"
+				fxLayoutAlign="space-between center">
+				<mat-checkbox class="remember-me" aria-label="Remember Me">
+				Remember Me
+				</mat-checkbox>
+				<a class="forgot-password">
+					Forgot Password?
+				</a>
+			</mat-card>
+		   </mat-card>
+
+
+			<button mat-raised-button color="accent" class="submit-button" aria-label="LOG IN"
+			[disabled]="loginForm.invalid" (click)="usersignin()">
+			LOGIN
+			</button>
+			<a mat-button  class="forgot-button" (click)="show=!show" >Forgot Password ?</a>
+		</form>
+		
+		<div *ngIf="show">
+			<form class="forgot-form" name="forgotpassword" novalidate>
+                <mat-card class="forgot-field"> 
+				<mat-form-field>
+				<input matInput placeholder="Email" formControlName="email">
+				</mat-form-field>
+				</mat-card>
+
+				<button mat-raised-button color="accent" class="submit-button" aria-label="Reset Password">
+				Reset Password
+				</button>
+			</form>
+		</div>
+		
+		<div class="form-footer">
+			<div class="uiScale-caption">
+				<span>No account?.</span>
+				<a href="#" class="btn button">Create one</a>
+			</div>
+			<p class="copyright">
+				To make Smart Life Path work, we log user data and share it with
+				service providers. Click "Sign in" above to accept Smart Life Path’s
+				<a href="#">Terms of Service</a> & <a href="#">Privacy Policy.</a>
+			</p>
+		</div>
+		
+	</div>
+</div>

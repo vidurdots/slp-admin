@@ -1,0 +1,397 @@
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/mixins.scss';
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.content-sec {
+	padding: 18px 0;
+	display: inline-block;
+	width: 100%;
+
+	.fa {
+		width: auto !important;
+		height: auto !important;
+		min-width: auto !important;
+		min-height: auto !important;
+	}
+
+	.mat-card {
+		padding: 0px;
+		box-shadow: none;
+		background: none;
+		border: none;
+	}
+
+	.mat-card-image {
+		width: auto;
+		max-width: 100% !important;
+		margin: 0px;
+	}
+
+	.my-profile {
+		.profile-banner {
+			position: relative;
+
+			.banner-img {
+				position: relative;
+
+				.bg-black {
+					background: rgba(0, 0, 0, 0.6);
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left: 0px;
+					right: 0px;
+					top: 0px;
+					z-index: 1;
+				}
+
+			}
+
+			.user-info {
+				position: absolute;
+				left: 24px;
+				bottom: -31px;
+				z-index: 5;
+
+				.user-img {
+					float: left;
+					position: relative;
+
+					img {
+						@include border-radius(50%);
+						border: solid 6px rgba(255, 255, 255, 0.5);
+						width: 174px;
+						height: 174px;
+					}
+
+					.upload {
+						position: absolute;
+						left: 30px;
+						bottom: 17px;
+						z-index: 5;
+						color: $white-color;
+						opacity: 0.7;
+
+						.mat-icon {
+							width: 32px;
+							height: 32px;
+							font-size: 36px;
+						}
+
+					}
+
+				}
+
+				.author-name {
+					float: right;
+
+					.mat-card-title {
+						padding-top: 84px;
+						margin-left: 26px;
+
+						h3 {
+							color: $white-color;
+							font-size: 22px;
+							font-weight: 600;
+							margin: 0px;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.profile-content {
+		display: inline-block;
+		width: 100%;
+		padding-top: 30px;
+
+		.title {
+			font-size: 19px;
+			color: $primary-color;
+			font-weight: 400;
+		}
+
+	}
+
+	.left-detail {
+		width: 847px;
+		float: left;
+
+		.my-profile-detail {
+			background: $chat-bg;
+			padding: 20px;
+
+			.event-list {
+				background: $white-color;
+				padding: 20px;
+				@include border-radius(10px);
+				@include box-shadow(2px 2px 7px rgba(0, 0, 0, 0.1));
+				display: inline-block;
+				width: 100%;
+				margin-bottom: 20px;
+
+				.event-list-img {
+					float: left;
+					width: 33%;
+				}
+
+				.event-list-content {
+					float: left;
+					width: 67%;
+					padding-left: 23px;
+
+					h3 {
+						margin-top: 0px;
+						color: $primary-color;
+						font-size: 19px;
+						font-weight: 600;
+						margin-bottom: 0px;
+					}
+
+					p {
+						font-size: 14px;
+						color: $primary-color;
+						line-height: 21px;
+						font-weight: 300;
+						margin-bottom: 0;
+						margin-top: 4px;
+					}
+
+					.price-sec {
+						margin: 0px;
+						display: inline-block;
+						width: 100%;
+
+						.price-left {
+							font-weight: 600;
+							font-size: 19px;
+							color: $primary-color;
+							float: left;
+						}
+
+						.price-right {
+							font-weight: 600;
+							font-size: 19px;
+							color: $primary-color;
+							float: right;
+						}
+
+					}
+
+				}
+
+			}
+
+			.edit-detail-form {
+				display: block !important;
+
+				.mat-form-field {
+					display: block;
+					width: 100%;
+					max-width: 100% !important;
+				}
+
+			}
+
+			.change-password-form {
+				padding-top: 20px;
+
+				.mat-form-field {
+					width: 100%;
+					display: block;
+				}
+
+			}
+
+		}
+
+	}
+
+	.sidebar-right {
+		width: 262px;
+		float: right;
+
+		.mat-list-item-content {
+			padding: 0px;
+		}
+
+		.mat-list {
+			padding-top: 0px;
+		}
+
+		.mat-list-item {
+			height: auto;
+		}
+
+		h2 {
+			border-bottom: solid 1px $light-border;
+			padding-bottom: 15px;
+		}
+
+		.followers-sec {
+			.followers-wrap {
+				display: inline-block;
+				width: 100%;
+				border-bottom: solid 1px $light-border;
+				padding-bottom: 11px;
+				padding-top: 11px;
+
+				.followers-img {
+					float: left;
+					margin-right: 11px;
+
+					img {
+						@include border-radius(50%);
+						width: 50px;
+						height: 50px;
+					}
+
+				}
+
+				.followers-content {
+					overflow: hidden;
+					float: left;
+					padding-top: 5px;
+
+					.mat-card-title {
+						margin: 0px;
+					}
+
+					h4 {
+						font-size: 16px;
+						color: $primary-color;
+						font-weight: 600;
+						margin-top: 0px;
+						margin-bottom: 0px;
+					}
+
+					span {
+						color: $hour-color;
+						font-size: 14px;
+						font-weight: 300;
+					}
+
+				}
+
+				.edit {
+					float: right;
+					width: auto;
+					padding: 0px;
+					min-width: auto;
+					color: rgba(0, 0, 0, 0.4);
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:1199px) and (min-width:992px) {
+	.container {
+		max-width: 970px;
+	}
+
+	.content-sec {
+		.left-detail {
+			width: 700px;
+			float: left;
+		}
+
+	}
+
+	.content-sec {
+		.sidebar-right {
+			width: 220px;
+			float: right;
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+	.container {
+		max-width: 750px;
+	}
+
+	.content-sec {
+		.left-detail {
+			width: 517px;
+			float: left;
+		}
+
+	}
+
+	.content-sec {
+		.sidebar-right {
+			width: 185px;
+			float: right;
+
+			.followers-sec {
+				.followers-wrap {
+					.followers-img img {
+						width: 30px;
+						height: 30px;
+					}
+
+					.followers-content {
+						padding-top: 0px;
+
+						h4 {
+							font-size: 14px;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:767px) {
+	.container {
+		max-width: 100%;
+	}
+
+		.content-sec {
+		.left-detail {
+			width: 100%;
+			float: none;
+		}
+
+		.sidebar-right {
+			width: 100%;
+			float: none;
+		}
+
+
+
+	}
+
+
+
+
+}
+
+@media only screen and (max-width:479px) {
+}

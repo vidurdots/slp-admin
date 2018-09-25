@@ -1,0 +1,23 @@
+<mat-toolbar class="header {{externalclass}}">
+<div fxLayout="row" fxLayoutAlign="flex-start"  fxFlex class="container">
+	<div class="head-one">
+		<a mat-button class="get-btn" mat-raised-button (click)="openGetstarted()" *ngIf="!signIIn">Get Started</a>
+		<div class="logo-main" *ngIf="!signIIn">
+			<a mat-button class="navbar-brand" routerLink="/">Smart Life Path</a>
+		</div>
+		<div class="header-logo-main" *ngIf="signIIn">
+         <img mat-card-image src="/assets/images/home-images/inner-logo.svg">
+		</div>
+		<div class="head-right">
+			<ng-container class="menu_item">
+		<app-item [item]="topmenu"></app-item>
+		</ng-container>
+	</div>
+</div>
+<div class="navmenu">
+	<ng-container class="menu_item">
+<app-item [item]="mainmenu"></app-item>
+</ng-container>
+</div>
+</div>
+</mat-toolbar>

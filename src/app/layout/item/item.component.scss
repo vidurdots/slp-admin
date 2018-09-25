@@ -1,0 +1,153 @@
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/mixins.scss';
+
+.top_menu {
+	.mat-button {
+		color: $primary-color;
+		font-size: 15px;
+		font-weight: 400;
+		display: block;
+		float: left;
+		padding: 0 0;
+		min-width: 75px;
+		background: none;
+
+		&:hover {
+			color: $blue-color;
+		}
+
+	}
+
+	.sign_in {
+		background: none;
+		box-shadow: none;
+	}
+
+}
+
+.main_menu {
+	text-align: center;
+
+	a {
+		&.mat-button {
+			color: $primary-color;
+			font-size: 15px;
+			font-weight: 400;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $blue-color;
+			}
+
+		}
+
+	}
+
+}
+
+.mat-card {
+	box-shadow: none !important;
+	padding: 0px;
+	border: none;
+}
+
+.mat-raised-button {
+	box-shadow: none !important;
+}
+
+.mat-button {
+	box-shadow: none;
+	border: none;
+	min-width: auto;
+}
+
+.mat-icon {
+	width: auto;
+	height: auto;
+	line-height: normal;
+}
+
+.after_logout {
+	display: inline-block;
+	width: 100%;
+	    padding-top: 10px;
+
+	.mat-button {
+		padding: 0 14px;
+	}
+
+	.serach-top {
+		float: left;
+
+		.mat-icon {
+			color: $header-btn;
+			font-size: 30px;
+		}
+
+	}
+
+	.notifications_top {
+		float: left;
+
+		.mat-icon {
+			color: $header-btn;
+			font-size: 30px;
+		}
+
+	}
+
+	.sign-drop {
+		float: left;
+
+		.sign_in {
+			display: block;
+			@include border-radius(50%);
+			width: 40px;
+			height: 40px;
+			min-width: auto;
+			padding: 0px;
+			background: $sign-bg;
+			margin-left: 11px;
+			overflow: hidden;
+
+			.mat-icon {
+				color: $sign-in;
+				font-size: 45px;
+				padding-top: 2px;
+				position: relative;
+				right: 2px;
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:479px) {
+	.top_menu {
+		.mat-button {
+			font-size: 13px;
+			min-width: 62px;
+		}
+
+		.sign_in {
+			font-size: 13px;
+			min-width: 52px;
+		}
+
+	}
+
+	.main_menu {
+		a {
+			&.mat-button {
+				font-size: 13px;
+				padding: 0 9px;
+				min-width: auto;
+			}
+
+		}
+
+	}
+
+}

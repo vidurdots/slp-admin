@@ -1,0 +1,363 @@
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/mixins.scss';
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.content-sec {
+	padding: 18px 0;
+
+	.fa {
+		width: auto !important;
+		height: auto !important;
+		min-width: auto !important;
+		min-height: auto !important;
+	}
+
+	.event-sidebar {
+		width: 262px;
+
+		.side-menu {
+			color: $primary-color;
+			font-size: 15px;
+			font-weight: 300;
+			display: block;
+			padding: 2px 10px;
+			border-bottom: solid 1px $lighter-border;
+
+			span {
+				display: block;
+			}
+
+			.icon {
+				float: left;
+				margin-right: 11px;
+				margin-top: 0px;
+
+				.icon-black {
+					display: block;
+				}
+
+				.icon-white {
+					display: none;
+				}
+
+				img {
+					width: 100%;
+					max-width: 25px !important;
+					height: auto;
+					margin: 0px;
+				}
+
+			}
+
+			&:hover {
+				background: $blue-color;
+				color: $white-color;
+				text-decoration: none;
+
+				.icon {
+					.icon-black {
+						display: none;
+					}
+
+					.icon-white {
+						display: block;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.event-detail-wrap {
+		border-left: solid 1px $lighter-border;
+		padding-left: 30px;
+
+		img {
+			margin: 0px;
+			width: auto;
+			max-width: 100% !important;
+		}
+
+		.breadcrumbs {
+			display: inline-block;
+			width: 100%;
+			padding-bottom:12px;
+
+			.mat-button {
+				color: $primary-color;
+				font-weight: 300;
+				padding: 0px;
+				min-width: auto;
+
+				.icons {
+					display: inline-block;
+					line-height: normal;
+					position: relative;
+					top: 2px;
+				}
+
+			}
+
+		}
+
+		.slide-banner {
+			display: inline-block;
+			width: 100%;
+			margin-bottom:15px;
+		}
+
+		.event-mid-wrap {
+			display: inline-block;
+			width: 100%;
+
+			.title {
+				font-size: 19px;
+				color: $primary-color;
+				font-weight: 400;
+			}
+
+			.event-mid {
+				width: 100%;
+				max-width: 600px;
+				float: left;
+
+				.activity-stream {
+					background: $chat-bg;
+					padding: 20px;
+
+					.example-form {
+						display: inline-block;
+						width: 100%;
+
+						.area_box {
+							position: relative;
+							border: solid 1px $textarea-border;
+							background: $white-color;
+							height: 109px;
+							padding-left: 20px;
+
+							.author_img {
+								float: left;
+								margin-right: 12px;
+								margin-top: 10px;
+
+								img {
+									@include border-radius(50%);
+									width: 49px;
+									height: 49px;
+								}
+
+							}
+
+							.reply_content {
+								overflow: hidden;
+								padding-right: 6px;
+
+								textarea {
+									width: 100%;
+									border: none;
+									height: 84px;
+									padding-top: 0px;
+									font-size: 14px;
+									color: rgba(0, 0, 0, 0.4);
+								}
+
+							}
+
+						}
+
+						.submit-btn {
+							@include border-radius(3px);
+							background: $blue-color;
+							color: $white-color;
+							display: inline-block;
+							padding: 0px 21px;
+							font-size: 13px;
+							border: none;
+							float: right;
+							margin-top: 10px;
+							line-height: 29px;
+						}
+
+					}
+
+					.example-card {
+						background: none;
+						padding: 0px;
+						box-shadow: none;
+
+						.comments-container {
+							padding-left: 50px;
+						}
+
+						.comments-list {
+							.comment-main-level {
+								.mat-card {
+									background: none;
+									padding: 0px;
+									box-shadow: none;
+								}
+
+								.comment-avatar {
+									display: inline-block;
+									width: 100%;
+									padding-bottom: 8px;
+
+									.mat-card-title {
+										margin-bottom: 0px;
+									}
+
+									.avatar-img {
+										@include border-radius(50%);
+										width: 49px;
+										height: 49px;
+										float: left;
+										margin-right: 14px;
+									}
+
+									h3 {
+										color: $primary-color;
+										font-size: 17px;
+										font-weight: 400;
+										margin-top: 3px;
+										margin-bottom: 2px;
+									}
+
+									span {
+										color: $primary-color;
+										font-size: 14px;
+										font-weight: 300;
+									}
+
+								}
+
+								.comment_description {
+									p {
+										font-weight: 300;
+										font-size: 13px;
+										color: $primary-color;
+									}
+
+								}
+
+								.mat-card-actions {
+									margin: 0px;
+								}
+
+								.reply-btn {
+									display: inline-block;
+									width: 100%;
+									text-align: right;
+
+									a {
+										@include border-radius(3px);
+										background: $blue-color;
+										color: $white-color;
+										display: inline-block;
+										padding: 0px 21px;
+										font-size: 13px;
+										border: none;
+										float: none;
+										margin-top: 10px;
+										border: solid 1px $blue-color;
+										line-height: 29px;
+									}
+
+									.report {
+										background: none;
+										border: solid 1px $primary-color;
+										color: $primary-color;
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+			.event-details-sub {
+				width: 100%;
+				max-width: 226px;
+				float: right;
+
+				.mat-card{ padding:0px; box-shadow:none; padding:0px;}
+
+				.title {
+					border-bottom: solid 1px $grey-border;
+					padding-bottom: 11px;
+				}
+
+				.description-sec {
+					border-bottom: solid 1px $grey-border;
+					padding-bottom: 11px;
+
+					h3 {
+						color: $grey-title;
+						font-size: 15px;
+					}
+
+					p {
+						color: $primary-color;
+						font-size: 13px;
+						font-weight: 300;
+						line-height: 18px;
+					}
+
+				}
+
+				.prgress-bar{
+					h3{
+						font-size:15px;
+						color:$primary-color;
+						font-weight:500;
+					}
+
+				}
+
+			.date{
+				font-size: 15px;
+			    color: $primary-color;
+			    font-weight: 500;
+
+			   .mat-form-field{width:100%;
+
+		   
+			   } 
+
+
+			}	
+
+			}
+
+		}
+
+	}
+
+}
+
+@media only screen and (max-width:1199px) and (min-width:992px) {
+}
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+}
+
+@media only screen and (max-width:767px) {
+}
+
+@media only screen and (max-width:479px) {
+}

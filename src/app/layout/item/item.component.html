@@ -1,0 +1,23 @@
+<!--Before login-->
+<div class="top_menu" *ngIf="!item && !signIIn">
+	<a mat-button [routerLink]="['/']" >Our Story</a>
+	<a mat-button class="sign_in" mat-raised-button (click)="openDialog()" *ngIf="!signIIn">Sign In</a>
+</div>
+<!--After login-->
+<mat-card class="after_logout" *ngIf="!item && signIIn">
+<mat-card class="serach-top">
+<a mat-button href="#"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">search</mat-icon></a>
+</mat-card>
+<mat-card class="notifications_top">
+	<a mat-button href="#"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">notifications_none</mat-icon></a>
+</mat-card>
+<mat-card class="sign-drop">
+<a mat-button class="sign_in" mat-raised-button (click)="usersignout()" *ngIf="signIIn"><mat-icon _ngcontent-c38="" class="mat-icon material-icons" role="img" aria-hidden="true">person</mat-icon></a>
+</mat-card>
+</mat-card>
+<div class="main_menu" *ngIf="item">
+	<a mat-button [routerLink]="['/']">Home</a>
+	<a mat-button  [routerLink]="['/community']">Community</a>
+	<a mat-button  [routerLink]="['/funding']">Funding</a>
+	<a mat-button   [routerLink]="['/health']">Health</a>
+</div>

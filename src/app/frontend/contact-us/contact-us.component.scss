@@ -1,0 +1,98 @@
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/mixins.scss';
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.content-sec {
+	padding: 18px 0;
+	display: inline-block;
+	width: 100%;
+
+	.title {
+		position: relative;
+		color: $primary-color;
+	    font-size: 46px;
+	    font-weight: 600;
+	    line-height: 1.2em;
+	    margin-bottom: 31px;
+	    text-transform: none;
+	    text-align: left;
+	    letter-spacing: 1px;
+	}
+
+	.fa {
+		width: auto !important;
+		height: auto !important;
+		min-width: auto !important;
+		min-height: auto !important;
+	}
+
+	.mat-card {
+		padding: 0px;
+		margin: 0px;
+		box-shadow: none;
+		background: none;
+	}
+
+	.address-section {
+		padding: 40px 0px;
+		display: inline-block;
+		width: 100%;
+
+		.left-box {
+			float: left;
+			width: 50%;
+			background: $light-blue;
+			text-align: center;
+            padding: 60px 0;
+		}
+
+		.address-box {
+			float: left;
+			width: 50%;
+			    padding-left: 113px;
+
+			.address-wrap {
+				width: 100%;
+				float: left;
+
+				.address-content {
+					padding: 30px 20px 3px 0px;
+					display: inline-block;
+					width: 100%;
+
+					.icon {
+						float: left;
+						margin-right: 10px;
+					}
+
+					.info {
+						float: left;
+						width: 77%;
+						font-size: 14px;
+						font-weight: 300;
+						
+
+						padding-top: 4px;
+
+						a{
+                       color: $primary-color;
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

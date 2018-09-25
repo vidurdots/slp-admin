@@ -1,0 +1,7 @@
+Account Name: vidur dots 
+Username: vidurdots 
+
+You can log in to your new account with this username at https://mlab.com/login/?user=vidurdots. 
+
+
+mongodb://<vidurdots>:<vidur@123>@ds018558.mlab.com:18558/smartlifepath
