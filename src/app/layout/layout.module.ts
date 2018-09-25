@@ -16,10 +16,8 @@ import {
 } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { SignupComponent } from './signup/signup.component';
-import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [
-		RouterModule,
 		CommonModule,
 		ReactiveFormsModule,
 		FormsModule,

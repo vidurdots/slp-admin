@@ -1,78 +1,213 @@
 @import './src/assets/css/variables.scss';
 @import './src/assets/css/mixins.scss';
 
-.container {
-	width: 100%;
-	max-width: 1170px;
-	padding: 0 15px;
-	margin: 0 auto;
-}
-
-.fa {
-	width: auto !important;
-	height: auto !important;
-	min-width: auto !important;
-	min-height: auto !important;
-}
-
 .content-sec {
-	padding: 18px 0;
-	display: inline-block;
-	width: 100%;
+	padding: 0px 0 18px;
 
-	.mat-card {
-		padding: 0px;
-		background: none;
-		box-shadow: none;
+	.fa {
+		width: auto !important;
+		height: auto !important;
+		min-width: auto !important;
+		min-height: auto !important;
 	}
 
-	img {
-		width: auto;
-		margin: 0px;
-		max-width: 100% !important;
-	}
+	&.our-story {
+		.about-sec {
+			padding: 20px 0px 60px;
 
-	.welcome-sec {
-		h2 {
-			color: $primary-color;
-			position: relative;
-			font-size: 46px;
-			font-weight: 600;
-			line-height: 1.2em;
-			margin-bottom: 31px;
-			text-transform: none;
-			text-align: left;
-			letter-spacing: 0px;
+			.left-img {
+				box-shadow: 0 9px 16px 0.7px rgba(0, 0, 0, 0.15);
+			}
+
+			.about-content {
+				h2 {
+					font-weight: 300;
+					margin-bottom: 25px;
+					line-height: 36px;
+				}
+
+				p {
+					color: $primary-color;
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 24px;
+				}
+
+			}
+
 		}
 
-	}
+		.event-work {
+			background: $contact-bg;
+			padding: 40px 0px;
 
+			h2 {
+				font-weight: 700;
+				text-transform: capitalize;
+				font-size: 36px;
+				padding-bottom: 15px;
+				margin-bottom: 0;
+				position: relative;
+				text-align: center;
 
-.brand-section{
-		.brand-text{ 
-			text-align:center; 
-			width:100%; 
-			max-width:882px; 
-			margin:0 auto;
-		h2 {
-			color: $primary-color;
-			position: relative;
-			font-size: 46px;
-			font-weight: 600;
-			line-height: 1.2em;
-			margin-bottom: 31px;
-			text-transform: none;
-			text-align: center;
-			letter-spacing: 0px;
+				&:before {
+					position: absolute;
+					left: 50%;
+					bottom: 0;
+					height: 1px;
+					width: 50px;
+					margin-left: -25px;
+					background-color: $blue-color;
+					content: "";
+				}
+
+			}
+
+			p {
+				color: $primary-color;
+				line-height: 24px;
+				max-width: 730px;
+				margin: 20px auto 0;
+				line-height: 25px;
+				font-size: 16px;
+				text-align: center;
+			}
+
+			.work-process {
+				text-align: center;
+				margin: 41px 0;
+
+				.icon {
+					display: block;
+					width: 100px;
+					height: 100px;
+					line-height: 113px;
+					color: $white-color;
+					background: $blue-color;
+					text-align: center;
+					margin: 0 auto 24px;
+
+					i {
+						color: $white-color;
+						font-size: 36px;
+					}
+
+				}
+
+				h4 {
+					margin-bottom: 0px;
+					color: $primary-color;
+					font-size: 18px;
+					text-transform: uppercase;
+					margin-bottom: 15px;
+				}
+
+				p {
+					color: $primary-color;
+					font-weight: 300;
+					font-size: 14px;
+					line-height: 22px;
+					margin-top: 0px;
+				}
+
+			}
+
 		}
 
-		p{
-			color: $primary-color;
-			font-size: 19px;
-			font-weight: 300;
-			text-align:center;
-			line-height:27px;
-		}
+		.latest-news { padding-top:40px;
+
+					h2 {
+				font-weight: 700;
+				text-transform: capitalize;
+				font-size: 36px;
+				padding-bottom: 15px;
+				margin-bottom: 0;
+				position: relative;
+				text-align: center;
+
+				&:before {
+					position: absolute;
+					left: 50%;
+					bottom: 0;
+					height: 1px;
+					width: 50px;
+					margin-left: -25px;
+					background-color: $blue-color;
+					content: "";
+				}
+
+			}
+
+			p {
+				color: $primary-color;
+				line-height: 24px;
+				max-width: 730px;
+				margin: 20px auto 0;
+				line-height: 25px;
+				font-size: 16px;
+				text-align: center;
+			}
+
+
+
+
+			.blog-item {
+				box-shadow: 0 13px 23px rgba(0, 0, 0, 0.05);
+				margin:50px auto;
+
+				.blog-content {
+					padding: 25px 22px;
+
+					.blog-meta {
+						margin-bottom: 15px;
+						overflow: hidden;
+
+						.blog-author {
+							margin-right: 20px;
+							float: left;
+						}
+
+						.blog-info {
+							float: left;
+
+							h4 {
+								margin-top: 0px;
+								margin-bottom: 5px;
+								color: $blue-color;
+							}
+
+						}
+
+					}
+
+					h3.title {
+						font-size: 21px;
+					}
+
+					p {
+						    font-size: 15px;
+						    text-align: left;
+							    margin-top: 0px;
+							    margin-bottom: 15px;
+					}
+
+					.blog-footer-meta {
+						font-size: 15px;
+
+						span {
+							margin-right: 12px;
+							display: inline-block;
+						}
+
+						a {
+							color: $primary-color;
+						}
+
+					}
+
+				}
+
+			}
 
 		}
 

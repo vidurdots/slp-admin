@@ -1,18 +1,28 @@
 <main>
 	<div class="content-sec">
 		<div class="container">
+			<mat-card class="map-sec">
+			<iframe width="600" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+			</mat-card>
 			<mat-card class="address-section">
-           <mat-card class="left-box">
-           	<img src="/assets/images/home-images/humanetech.png">
-           </mat-card>
+			<mat-card-title><h2 class="title">GET INFO</h2></mat-card-title>
 			<mat-card class="address-box">
-			<mat-card-title><h2 class="title">Get in Touch and let us Know we can help.</h2></mat-card-title>
+			<mat-card class="address-wrap">
+			<mat-card-content>
+			<mat-card class="address-content">
+			<mat-card class="icon"><mat-icon _ngcontent-c38="" class="s-48 mat-icon material-icons" role="img" aria-hidden="true">person_pin_circle</mat-icon></mat-card>
+			<mat-card class="info">
+		184 Collins Street West Victoria, United States, 8007
+			</mat-card>
+			</mat-card>
+			</mat-card-content>
+			</mat-card>
 			<mat-card class="address-wrap">
 			<mat-card-content>
 			<mat-card class="address-content">
 			<mat-card class="icon"><mat-icon _ngcontent-c38="" class="s-48 mat-icon material-icons" role="img" aria-hidden="true">phone_iphone</mat-icon></mat-card>
 			<mat-card class="info">
-			<a href="tel:(1800) 123 4567">(1800) 123 4567</a><br><a href="tel:(1800) 123 4568">(1800) 123 4568</a>
+			(1800) 123 4567<br>(1800) 123 4568
 			</mat-card>
 			</mat-card>
 			</mat-card-content>
@@ -22,12 +32,38 @@
 			<mat-card class="address-content">
 			<mat-card class="icon"><mat-icon _ngcontent-c38="" class="s-48 mat-icon material-icons" role="img" aria-hidden="true">mail_outline</mat-icon></mat-card>
 			<mat-card class="info">
-			<a href="mailto:Info@smartlifepath.com">Info@smartlifepath.com</a><br><a href="mailto:Support@smartlifepath.com">Support@smartlifepath.com</a>
+			Info@smartlifepath.com <br>Support@smartlifepath.com
 			</mat-card>
 			</mat-card>
 			</mat-card-content>
 			</mat-card>
 			</mat-card>
+			</mat-card>
+			<mat-card class="contact-form-section">
+			<mat-card-title><h2 class="title">GET IN TOUCH</h2></mat-card-title>
+			<mat-card class="contact-form">
+			<form name="contact_us" class="contact-us-form">
+				<mat-form-field>
+				<input matInput placeholder="First name" name="firstName" required>
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput placeholder="Last name" name="lastName" required>
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput placeholder="Email Address" name="email" required (blur)="checkEmail()">
+				</mat-form-field>
+				<mat-form-field>
+				<input matInput placeholder="phone No" name="email" required>
+				</mat-form-field>
+				<mat-form-field >
+				<textarea matInput placeholder="Message" name="message" required>
+				</textarea>
+				</mat-form-field>
+				<button mat-button class="submit-btn">Submit</button>
+			</form>
+			
+			</mat-card>
+			
 			</mat-card>
 		</div>
 	</div>

@@ -13,6 +13,18 @@
 	display: inline-block;
 	width: 100%;
 
+    .main-promo{
+        height:400px;
+    }
+
+    agm-map {
+        width: 100%;
+        height: 300px;
+    }
+
+    .strap-text{
+        padding-top: 10px;
+    }
 
 	.fa {
 		width: auto !important;
